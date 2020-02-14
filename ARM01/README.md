@@ -26,3 +26,6 @@ Fastest way to deploy.....
 ## References
 
 - https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview
+
+
+[Episode/ Module 2 -->](../ARM02/README.md)
