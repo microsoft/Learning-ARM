@@ -1,0 +1,42 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "storageName": {
+           "type": "string",
+           "metadata": {
+                "description": "description"
+            },
+            "maxLength": 10
+        },
+        "storageKind": {
+           "type": "string",
+           "metadata": {
+                "description": "description"
+            },
+            "allowedValues": [
+                "Storage",
+                "StorageV2"
+            ]
+        }
+    },
+    "functions": [],
+    "variables": {},
+    "resources": [
+        {
+            "name": "[parameters('storageName')]",
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2019-06-01",
+            "tags": {
+                "displayName": "storageaccount1"
+            },
+            "location": "[resourceGroup().location]",
+            "kind": "[parameters('storageKind')]",
+            "sku": {
+               "name": "Premium_LRS",
+               "tier": "Premium"
+             }
+        }
+    ],
+    "outputs": {}
+}

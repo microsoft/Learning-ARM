@@ -1,8 +1,8 @@
 # ARM02 - Create first template
 
-Now it's time to code. This session will introduce Visual Studio Code tools, and show you how to create your first template from snippet, and how to deploy it.
+Now it's time to code. This session introduces the ARM Tools extension for VS Code, shows you how to create your first template from a snippet, and how to deploy it.
 
-The Azure Resource Manager (ARM) Tools for Visual Studio Code, is available from the marketplace (for free), or directly from VSCode. Click the **Extensions** button from the Side Bar and search for "**ARM**".
+The Azure Resource Manager (ARM) Tools for Visual Studio Code, is available from the marketplace (for free), or directly from VSCode. Click the **Extensions** button from the Side Bar and search for "**ARM Tools**".
 
 ![Visual Studio extension][extension] 
 
@@ -17,31 +17,31 @@ Now from any JSon (.json) file the extension will automatically be active. Creat
 
 Now the tools is asking you to enter a name for your resource. Enter: learningARMStorage.
 
-
 ```json
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {},
+    "functions": [],
     "variables": {},
     "resources": [
         {
-            "name": "learningARMStorage",
+            "name": "storageaccount1",
             "type": "Microsoft.Storage/storageAccounts",
-            "apiVersion": "2015-06-15",
-            "location": "[resourceGroup().location]",
+            "apiVersion": "2019-06-01",
             "tags": {
-                "displayName": "learningARMStorage"
+                "displayName": "storageaccount1"
             },
-            "properties": {
-                "accountType": "Standard_LRS"
-            }
+            "location": "[resourceGroup().location]",
+            "kind": "StorageV2",
+            "sku": {
+               "name": "Premium_LRS",
+               "tier": "Premium"
+             }
         }
     ],
-    "outputs": {},
-    "functions": []
+    "outputs": {}
 }
-
 ```
 
 - You have now a template
@@ -49,10 +49,9 @@ Now the tools is asking you to enter a name for your resource. Enter: learningAR
 - validation in the outputs section.
 - Notice the `location` is using an expression. In fact it's a ARM function, we will learn more about it in the episode/ module 5.
 
-
 ## References
 
-- https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools
+- https://aka.ms/arm-tools
 
 [extension]:  medias/extension.png
 [skeleton]:  medias/skeleton.gif
