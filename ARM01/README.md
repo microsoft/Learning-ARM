@@ -21,7 +21,14 @@ Azure Resource manager (ARM) template is a way to describe your infrastructure..
 
 ## Why
 
-Fastest way to deploy.....
+Here are some advantages to use ARM template :
+
+- A template file is light and easy to keep in a repository.
+- It's very simple to have the exact same template deployed in multiple environments.
+- The template is idempotent.
+- ARM templates are really fast to deploy.
+- Easy to edit/ customize/ expand.
+- Easy to delete.
 
 ## References
 
