@@ -5,19 +5,23 @@
         "storageName": {
            "type": "string",
            "metadata": {
-                "description": "description"
+                "description": "Name of your storage account. Text only no space."
             },
             "maxLength": 10
         },
-        "storageKind": {
-           "type": "string",
-           "metadata": {
-                "description": "description"
-            },
+        "storageSKU": {
+            "type": "string",
             "allowedValues": [
-                "Storage",
-                "StorageV2"
-            ]
+                "Standard_LRS",
+                "Standard_ZRS",
+                "Standard_GRS",
+                "Standard_RAGRS",
+                "Premium_LRS"
+            ],
+            "defaultValue": "Premium_LRS",
+            "metadata": {
+            "description": "The type of replication to use for the storage account."
+            }
         }
     },
     "functions": [],
@@ -31,9 +35,9 @@
                 "displayName": "storageaccount1"
             },
             "location": "[resourceGroup().location]",
-            "kind": "[parameters('storageKind')]",
+            "kind": "StorageV2",
             "sku": {
-               "name": "Premium_LRS",
+               "name": "[parameters('storageSKU')]",
                "tier": "Premium"
              }
         }
