@@ -70,7 +70,7 @@ To use this function inside an ARM template we need to place it between square b
 
 ## Exercises
 
-Now let's practice the things we learn in the little chapter. You can continue where you left at the previous chapter (ARM02 - Create first template) or start fresh with the files contained in the folder [begin-with]([begin-with/)
+Now let's practice the things we learn in the little chapter. You can continue where you left at the previous chapter (ARM02 - Create first template) or start fresh with the files contained in the folder [begin-with]([begin-with/azuredeploy.json)
 
 ### 🥖 Add the parameter storageSKU
 
@@ -88,7 +88,7 @@ All the parameter are defined, replace the hard-coded value of **storage SKU** a
 
 ---
 
-To see if you have done successfully the exercises, compare your files with the once in the folder [end-with]([end-with/)
+To see if you have done successfully the exercises, compare your files with the once in the folder [end-with]([end-with/azuredeploy.json)
 
 
 
