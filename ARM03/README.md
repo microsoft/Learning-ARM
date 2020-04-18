@@ -12,7 +12,7 @@ To make our template dynamic we can pass some information when we call it using 
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {},
-    ...
+}
 ```
 This is where we will define our parameters. There is multiple type of parameters but before we go list them and see some scenarios, let's understand how parameters are defined.
 
@@ -132,7 +132,9 @@ Create a parameter file. You can do it manually or using the VSCode extension. N
 
 After confirming that your template and parameter file are valid, deploy it.
 
-  az group deployment create -g MyResourceGroup --template-file azuredeploy.json --parameters --parameters azuredeploy.parameters.json
+```
+      az group deployment create -g MyResourceGroup --template-file azuredeploy.json --parameters --parameters azuredeploy.parameters.json
+```
 
 ---
 
