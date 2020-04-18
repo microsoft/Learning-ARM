@@ -5,8 +5,8 @@
         "storageName": {
             "value": "tstStorage"
         },
-        "storageKind": {
-            "value": "StorageV2"
+        "storageSKU": {
+            "value": "Premium_LRS"
         }
     }
 }
