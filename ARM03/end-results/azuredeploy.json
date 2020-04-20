@@ -39,7 +39,10 @@
             "sku": {
                "name": "[parameters('storageSKU')]",
                "tier": "Premium"
-             }
+             },
+            "properties": {
+                "supportsHttpsTrafficOnly": true
+            }
         }
     ],
     "outputs": {}
