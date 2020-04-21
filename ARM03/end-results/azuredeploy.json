@@ -10,7 +10,7 @@
             "maxLength": 10
         },
         "storageSKU": {
-            "type": "string",
+            "type": "string2",
             "allowedValues": [
                 "Standard_LRS",
                 "Standard_ZRS",

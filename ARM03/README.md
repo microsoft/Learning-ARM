@@ -12,7 +12,7 @@ To make our template dynamic we can pass some information when we call it using 
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {},
-    ...
+}
 ```
 This is where we will define our parameters. There is multiple type of parameters but before we go list them and see some scenarios, let's understand how parameters are defined.
 
@@ -66,6 +66,44 @@ To use this function inside an ARM template we need to place it between square b
    ...
 }
 ```
+
+## Deploying with parameters
+
+We learn in the previous chapter different ways how we can deploy an ARM template, but how can you do the same passing the parameter values? Of course with Azure CLI you could just pass all the key-pair value to the command like this:
+
+  az group deployment create -g MyResourceGroup --template-file azuredeploy.json --parameters --parameters storageName=tstStorage storageKind=StorageV2
+
+That's a valid command and it will works. However it's not very convenient and portable. I better way will be to pass a parameter file. And you could have a different file depending of the environment that you are targeting.
+
+  az group deployment create -g MyResourceGroup --template-file azuredeploy.json --parameters --parameters azuredeploy.parameters.json
+
+
+## Create a Parameter file.
+
+A parameter files is just yet another JSON file. SO you can easily create that in any text editor. However, there is a few really nice feature in the VS Code Extension: [Azure Resource Manager (ARM) Tools](https://marketplace.visualstudio.com/items?WT.mc_id=learningarm-github-frbouche&itemName=msazurermtools.azurerm-vscode-tools) that will make you save a lot of time.
+
+To create a new parameter file simply right-click anywhere in your ARM template, to make the contextual menu to popup. Select **Select/Create Parameter File...**, then **New** and Finally **All parameters**.
+
+This will create a new file with the following structure.
+
+```json
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "storageSKU": {
+            "value": "Premium_LRS"
+        }
+    }
+}
+```
+
+A interesting feature of using the *Azure Resource Manager (ARM) Tools* is that it will validate the template and the values of the parameters associated with it.
+
+![Validation Error](medias/validationError.png)
+
+The validation error message can be see by mouse over or in the **Problem** tab in the console (Ctrl+`).
+
 ---
 
 ## Exercises
@@ -85,6 +123,18 @@ Add a new parameter **storageName** of type `string`. It should have a descripti
 ### 🥖 Use Parameters
 
 All the parameter are defined, replace the hard-coded value of **storage SKU** and **storage Name** by their respective parameter.
+
+### 🥖 Create a Parameter File
+
+Create a parameter file. You can do it manually or using the VSCode extension. Name your file: `azuredeploy.parameters.json`.
+
+### 🥖 Deploy The ARM Template
+
+After confirming that your template and parameter file are valid, deploy it.
+
+```
+      az group deployment create -g MyResourceGroup --template-file azuredeploy.json --parameters --parameters azuredeploy.parameters.json
+```
 
 ---
 
