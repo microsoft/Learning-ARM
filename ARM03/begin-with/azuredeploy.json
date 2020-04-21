@@ -17,7 +17,10 @@
             "sku": {
                "name": "Premium_LRS",
                "tier": "Premium"
-             }
+            },
+            "properties": {
+                "supportsHttpsTrafficOnly": true
+            }
         }
     ],
     "outputs": {}

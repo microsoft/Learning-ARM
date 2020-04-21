@@ -104,6 +104,30 @@ A interesting feature of using the *Azure Resource Manager (ARM) Tools* is that 
 
 The validation error message can be see by mouse over or in the **Problem** tab in the console (Ctrl+`).
 
+
+## More Security
+
+The `securestring` inside the ARM template is really great. Using them will make sure our sensitive information won;t show up in the logs. But if we are using a parameters file then the value will also be present in clear text! To avoid doing this (and by mistake pushing our password in the source control, we need to use [Azure KeyVault](https://docs.microsoft.com/en-us/azure/key-vault/secrets/about-secrets?WT.mc_id=learnARM-github-frbouche). You will need to to have a active KeyVault and you will be able to reference your secret in the parameter file like this: 
+
+```json
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "adminPassword": {
+        "reference": {
+          "keyVault": {
+          "id": "/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.KeyVault/vaults/<vault-name>"
+          },
+          "secretName": "ExamplePassword"
+        }
+      },
+    }
+}
+```
+In this sample we would pass the secret **secretName** contained in the KeyVault **<vault-name>**. TO know how to create your KeyVault refer to [Use Azure Key Vault to pass secure parameter value during deployment](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/key-vault-parameter?tabs=azure-cli&WT.mc_id=learnARM-github-frbouche)
+
+
 ---
 
 ## Exercises
