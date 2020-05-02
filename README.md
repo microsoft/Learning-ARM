@@ -11,22 +11,22 @@ In this tutorial you will learn the what, the why about Azure Resource manager (
 
 ### [ARM02 - Create first template](ARM02/README.md)
 
-NOw it's time to code. This session will introduce Visual Studio Code tools, and show you how to create your first template from snippet, and how to deploy it.
+Now it's time to code. This session will introduce Visual Studio Code tools, and show you how to create your first template from snippet, and how to deploy it.
 
 
 ### [ARM03 - Parameters](ARM03/README.md)
 
-Add and use parameters, and parameter files.
+This is where we will define our parameters. There is multiple type of parameters but before we go list them and see some scenarios, let's understand how parameters are defined.
 
 
-### [ARM04 - Variables](ARM04/README.md)
-
-Add and use variables.
-
-
-### [ARM05 - Template functions](ARM05/README.md)
+### [ARM04 - Template functions](ARM05/README.md)
 
 What are template functions, show common functions, add and use a template function.
+
+
+### [ARM05 - Variables](ARM04/README.md)
+
+Add and use variables.
 
 
 ### [ARM06 - Template output](ARM06/README.md)

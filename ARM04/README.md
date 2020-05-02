@@ -1,6 +1,6 @@
-# ARM04 - Variables
+# ARM04 - Template functions
 
-Add and use variables.
+---
 
 
 [<-- Episode/ Module 3](../ARM03/README.md) | [Episode/ Module 4 -->](../ARM04/README.md)
