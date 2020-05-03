@@ -9,38 +9,50 @@
             },
             "maxLength": 10
         },
-        "storageSKU": {
-            "type": "string2",
+        "environment": {
+            "type": "string",
             "allowedValues": [
-                "Standard_LRS",
-                "Standard_ZRS",
-                "Standard_GRS",
-                "Standard_RAGRS",
-                "Premium_LRS"
+                "DEV",
+                "PROD"
             ],
-            "defaultValue": "Premium_LRS",
+            "defaultValue": "DEV",
             "metadata": {
-            "description": "The type of replication to use for the storage account."
+            "description": "Define the type of environment and resource to deploy. "
             }
         }
     },
     "functions": [],
     "variables": {
-
+        "suffix": "[uniqueString(resourceGroup().id)]",
+        "storageInfo": {
+            "DEV": {
+                "name": "[toLower(concat(parameters('storageName'), variables('suffix')))]",
+                "storageSKU": "Standard_LRS",
+                "storageTier": "Standard"
+            },
+            "PROD": {
+                "name": "[tolower(concat(substring(parameters('storageName'), 0, min(length(parameters('storageName')),16)), 'stg', variables('suffix')))]",
+                "storageSKU": "Premium_LRS",
+                "storageTier": "Premium"
+            }
+        },
+        "storageSKU": "[variables('storageInfo')[parameters('environment')].storageSKU]",
+        "StorageTier": "[variables('storageInfo')[parameters('environment')].storageTier]",
+        "primeStorageName":"[variables('storageInfo')[parameters('environment')].name]"
     },
     "resources": [
         {
-            "name": "[toLower(concat(parameters('storageName'), uniqueString(resourceGroup().id)))]",
+            "name": "[variables('primeStorageName')]",
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2019-06-01",
             "tags": {
-                "displayName": "[toLower(concat(parameters('storageName'), uniqueString(resourceGroup().id)))]"
+                "displayName": "[variables('primeStorageName')]"
             },
             "location": "[resourceGroup().location]",
             "kind": "StorageV2",
             "sku": {
-               "name": "[parameters('storageSKU')]",
-               "tier": "Premium"
+               "name": "[variables('storageSKU')]",
+               "tier": "[variables('storageTier')]"
              },
             "properties": {
                 "supportsHttpsTrafficOnly": true
