@@ -25,14 +25,16 @@
         }
     },
     "functions": [],
-    "variables": {},
+    "variables": {
+
+    },
     "resources": [
         {
-            "name": "[parameters('storageName')]",
+            "name": "[toLower(concat(parameters('storageName'), uniqueString(resourceGroup().id)))]",
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2019-06-01",
             "tags": {
-                "displayName": "[parameters('storageName')]"
+                "displayName": "[toLower(concat(parameters('storageName'), uniqueString(resourceGroup().id)))]"
             },
             "location": "[resourceGroup().location]",
             "kind": "StorageV2",

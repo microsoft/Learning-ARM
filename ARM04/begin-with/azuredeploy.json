@@ -25,7 +25,9 @@
         }
     },
     "functions": [],
-    "variables": {},
+    "variables": {
+
+    },
     "resources": [
         {
             "name": "[parameters('storageName')]",
