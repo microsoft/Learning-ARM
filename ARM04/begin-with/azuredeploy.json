@@ -34,7 +34,7 @@
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2019-06-01",
             "tags": {
-                "displayName": "storageaccount1"
+                "displayName": "[parameters('storageName')]"
             },
             "location": "[resourceGroup().location]",
             "kind": "StorageV2",
