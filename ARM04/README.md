@@ -117,4 +117,4 @@ Did you notice, instead of entering a value "location" to each resource we are u
 
 - [ARM templates functions](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/template-functions?WT.mc_id=learnARM-github-frbouche)
 
-[<-- Episode/ Module 3](../ARM03/README.md) | [Episode/ Module 4 -->](../ARM04/README.md)
+[<-- Episode/ Module 3](../ARM03/README.md) | [Episode/ Module 5 -->](../ARM05/README.md)
