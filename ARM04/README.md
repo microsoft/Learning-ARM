@@ -1,6 +1,6 @@
 # ARM04 - Template functions
 
-So happy about all the things you learn in those first chapters. But their good chance is that if try to execute the PowerShell or Bash command on your side you will end up with: 
+So now you are happy about all the things you learn in those first chapters. But their good chance is that if try to execute the PowerShell or Bash command on your side you will end up with: 
 
 > 
 > ____ with given name ____ already exists.
@@ -43,7 +43,7 @@ The function `utcNow(format)` can be used as default value for a parameter, we c
     },
     "resources": [
          {
-            "name": "[concat(parameters('storageName'), parameters('mydate')]",
+            "name": "[concat(parameters('storageName'), parameters('mydate'))]",
             "type": "Microsoft.Storage/storageAccounts",
          }
     ]
