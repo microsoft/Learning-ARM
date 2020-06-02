@@ -49,17 +49,17 @@ How to modularize templates using nested and linked templates.
 Using vs code snippets, quick start gallery, and exported templates.
 
 
-### [ARM10 - How to reverse engineer](ARM010/README.md)
+### [ARM10 - How to reverse engineer](ARM10/README.md)
 
 How to get a functional ARM template from something that is already deployed.
 
 
-### [ARM11 - Azure DevOps with ARM template](ARM011/README.md)
+### [ARM11 - Azure DevOps with ARM template](ARM11/README.md)
 
 Deploy an complete ARM template from Azure DevOps
 
 
-### [ARM12 - GitHub Actions with ARM template](ARM012/README.md)
+### [ARM12 - GitHub Actions with ARM template](ARM12/README.md)
 
 Deploy an complete ARM template using GitHub Actions
 
