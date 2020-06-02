@@ -1,0 +1,63 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "storageName": {
+           "type": "string",
+           "metadata": {
+                "description": "Name of your storage account. Text only no space."
+            },
+            "maxLength": 10
+        },
+        "environment": {
+            "type": "string",
+            "allowedValues": [
+                "DEV",
+                "PROD"
+            ],
+            "defaultValue": "DEV",
+            "metadata": {
+            "description": "Define the type of environment and resource to deploy. "
+            }
+        }
+    },
+    "functions": [],
+    "variables": {
+        "suffix": "[uniqueString(resourceGroup().id)]",
+        "storageInfo": {
+            "DEV": {
+                "name": "[toLower(concat(parameters('storageName'), variables('suffix')))]",
+                "storageSKU": "Standard_LRS",
+                "storageTier": "Standard"
+            },
+            "PROD": {
+                "name": "[tolower(concat(substring(parameters('storageName'), 0, min(length(parameters('storageName')),16)), 'stg', variables('suffix')))]",
+                "storageSKU": "Premium_LRS",
+                "storageTier": "Premium"
+            }
+        },
+        "storageSKU": "[variables('storageInfo')[parameters('environment')].storageSKU]",
+        "StorageTier": "[variables('storageInfo')[parameters('environment')].storageTier]",
+        "primeStorageName":"[variables('storageInfo')[parameters('environment')].name]"
+    },
+    "resources": [
+        {
+            "name": "[variables('primeStorageName')]",
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2019-06-01",
+            "tags": {
+                "displayName": "[variables('primeStorageName')]"
+            },
+            "location": "[resourceGroup().location]",
+            "kind": "StorageV2",
+            "sku": {
+               "name": "[variables('storageSKU')]",
+               "tier": "[variables('storageTier')]"
+             },
+            "properties": {
+                "supportsHttpsTrafficOnly": true
+            }
+        }
+    ],
+    "outputs": {}
+}
