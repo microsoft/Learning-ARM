@@ -1,0 +1,9 @@
+  
+  
+  -- az group create -n armdemo -l eastus
+  
+  az group deployment validate -g armdemo --template-file ARM07\end-results\temp.json
+
+
+
+  az group deployment validate -g armdemo --template-file ARM07\end-results\azuredeploy.json --parameters ARM07\end-results\azuredeploy.parameters.json
