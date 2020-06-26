@@ -54,14 +54,14 @@ Using dependencies to control resource deployment order.
 How to modularize templates using nested and linked templates.
 
 
-### [ARM09 - Finding template examples](ARM09/README.md)
+### [ARM09 - Loops](ARM09/README.md)
+
+How to do loops and why would you do it.
+
+
+### [ARM10 - The definitive video for getting an ARM template for Resource X](ARM10/README.md)
 
 Using vs code snippets, quick start gallery, and exported templates.
-
-
-### [ARM10 - How to reverse engineer](ARM10/README.md)
-
-How to get a functional ARM template from something that is already deployed.
 
 
 ### [ARM11 - Azure DevOps with ARM template](ARM11/README.md)
