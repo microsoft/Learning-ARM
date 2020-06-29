@@ -2,6 +2,15 @@
 
 In this tutorial you will learn the what, the why about Azure Resource manager (ARM) template. Why why talk about declarative, idempotency.
 
+## Azure DevOps - DevOps Lab - Video
+
+[<img src="https://img.youtube.com/vi/VWe-stknCIM/maxresdefault.jpg" width="50%">](https://youtu.be/VWe-stknCIM)
+- [YouTube](https://youtu.be/VWe-stknCIM)
+- [Channel9](https://channel9.msdn.com/Shows/DevOps-Lab/Demystifying-ARM-Templates-Intro-to-ARM-Templates?term=Demystifying%20ARM&lang-en=true)
+
+---
+
+
 ## What it is
 
 Azure Resource manager (ARM) template is a way to describe your infrastructure....

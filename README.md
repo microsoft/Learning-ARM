@@ -12,6 +12,8 @@ urlFragment: "update-this-to-unique-url-stub"
 
 In this repository you will find a series of tutorial paired with videos to guide you through learning the best practice about Azure Resource manager (ARM) template.
 
+Each video is featured in the same page as the content. The videos are part of Azure DevOps - DevOps Lab show.
+
 ## Tutorials
 
 ### [ARM01 - Introduction to ARM templates](ARM01/README.md)
