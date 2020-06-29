@@ -29,12 +29,12 @@ Now it's time to code. This session will introduce Visual Studio Code tools, and
 This is where we will define our parameters. There is multiple type of parameters but before we go list them and see some scenarios, let's understand how parameters are defined.
 
 
-### [ARM04 - Template functions](ARM05/README.md)
+### [ARM04 - Template functions](ARM04/README.md)
 
 What are template functions, show common functions, add and use a template function.
 
 
-### [ARM05 - Variables](ARM04/README.md)
+### [ARM05 - Variables](ARM05/README.md)
 
 Variables are very useful in all king of scenarios to simplify things. Azure Resource Manager (ARM) templates aren't an exception and the variable will offer great flexibility. In this chapter, we will explain how you can use variables inside your template to make them easier to read, or to use. 
 
