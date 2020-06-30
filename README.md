@@ -61,7 +61,7 @@ How to modularize templates using nested and linked templates.
 How to do loops and why would you do it.
 
 
-### [ARM10 - The definitive video for getting an ARM template for Resource X](ARM10/README.md)
+### [ARM10 - Getting an ARM template for Resource X](ARM10/README.md)
 
 Using vs code snippets, quick start gallery, and exported templates.
 
