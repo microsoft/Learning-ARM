@@ -63,7 +63,7 @@ How to do loops and why would you do it.
 
 ### [ARM10 - Getting an ARM template for Resource X](ARM10/README.md)
 
-Using vs code snippets, quick start gallery, and exported templates.
+The ARM template are very powerful and useful, we can agree on that. However, something it could be hard to get started. In this tutorial you will learn tips and tricks to start from scratch with existing template or export the template from existing resources.
 
 
 ### [ARM11 - Azure DevOps with ARM template](ARM11/README.md)
