@@ -2,6 +2,16 @@
 
 Now it's time to code. This session introduces the ARM Tools extension for VS Code, shows you how to create your first template from a snippet, and how to deploy it.
 
+## Azure DevOps - DevOps Lab - Video
+
+[<img src="https://img.youtube.com/vi/YqoiR5HDhSo/maxresdefault.jpg" width="50%">](https://youtu.be/YqoiR5HDhSo)
+- [YouTube](https://youtu.be/YqoiR5HDhSo)
+- [Channel9](https://channel9.msdn.com/Shows/DevOps-Lab/Demystifying-ARM-Templates-Creating-Your-First-Template)
+
+
+---
+
+
 The Azure Resource Manager (ARM) Tools for Visual Studio Code, is available from the marketplace (for free), or directly from VSCode. Click the **Extensions** button from the Side Bar and search for "**ARM Tools**".
 
 ![Visual Studio extension][extension] 
@@ -51,7 +61,9 @@ Now the tools is asking you to enter a name for your resource. Enter: learningAR
 
 ## References
 
-- https://aka.ms/arm-tools
+- [Download VS Code for Linux, Mac, and Windows](https://code.visualstudio.com/Download?WT.mc_id=learnARM-github-frbouche)
+- [https://aka.ms/arm-tools](https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools&WT.mc_id=learnARM-github-frbouche)
+
 
 [extension]:  medias/extension.png
 [skeleton]:  medias/skeleton.gif
