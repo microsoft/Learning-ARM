@@ -71,7 +71,7 @@ To use this function inside an ARM template we need to place it between square b
 
 We learn in the previous chapter different ways how we can deploy an ARM template, but how can you do the same passing the parameter values? Of course with Azure CLI you could just pass all the key-pair value to the command like this:
 
-  az group deployment create -g MyResourceGroup --template-file azuredeploy.json --parameters --parameters storageName=tstStorage storageKind=StorageV2
+  az group deployment create -g MyResourceGroup --template-file azuredeploy.json --parameters storageName=tstStorage storageKind=StorageV2
 
 That's a valid command and it will works. However it's not very convenient and portable. I better way will be to pass a parameter file. And you could have a different file depending of the environment that you are targeting.
 
