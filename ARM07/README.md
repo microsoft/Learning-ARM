@@ -1,4 +1,4 @@
-# ARM07 - Controlling deployment
+# 7 - Demystifying ARM Templates: Controlling Deployment
 
 In the previous tutorial we were deploying only one resource. In most cases you will be deploying many resources with one template, and it's important to have some control over the deployment.
 

@@ -1,6 +1,15 @@
-# ARM03 - Parameters
+# 3 - Demystifying ARM Templates: Parameters
 
 In the previous tutorials we learn how to create resources using an Azure Resources Manager (ARM) template. However, it's was all static and defined *inside* the template.  In this tutorial you will learn how to use parameters to make your template dynamic and easier to use.
+
+## Azure DevOps - DevOps Lab - Video
+
+[<img src="https://img.youtube.com/vi/uYRLVx1bfZU/maxresdefault.jpg" width="50%">](https://youtu.be/uYRLVx1bfZU)
+- [YouTube](https://youtu.be/uYRLVx1bfZU)
+- [Channel9](https://channel9.msdn.com/Shows/DevOps-Lab/Demystifying-ARM-Templates-Parameters?WT.mc_id=learnARM-c9-fboucher)
+
+
+---
 
 Parameter Types
 ---------------

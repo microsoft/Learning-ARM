@@ -1,6 +1,6 @@
-# ARM12 - GitHub Actions with ARM template
+# 12 - Demystifying ARM Templates: Azure DevOps With ARM Templates
 
-Deploy an complete ARM template using GitHub Actions
+Deploy an complete ARM template from Azure DevOps
 
 
 [<-- Episode/ Module 11](../ARM11/README.md)

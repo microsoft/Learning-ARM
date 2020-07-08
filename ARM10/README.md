@@ -1,4 +1,4 @@
-# ARM10 - Getting an ARM template for Resource X
+# 10 - Demystifying ARM Templates: Getting an ARM template for Resource X
 
 The ARM template are very powerful and useful, we can agree on that. However, something it could be hard to get started. In this tutorial you will learn tips and tricks to start from scratch with existing template or export the template from existing resources. 
 
@@ -33,13 +33,21 @@ From this page you can decide to download the template, save it to your online l
 Azure Resource Explorer
 -----------------------
 
-The second option to see the ARM template from existing resources is to use the Azure Resource Explorer. You can easily find it at https://resources.azure.com/
+The second option to see the ARM template from existing resources is to use the Azure Resource Explorer. You can easily find it at [https://resources.azure.com/](https://resources.azure.com/)
 
 ![Resource Exporer](medias/ResourceExporer.png)
 
 From there you can select the subscription you want and start exploring the resource you are looking for. 
 
 It's a must have for sure!
+
+
+## References
+
+- [Azure Quickstart Templates](https://azure.microsoft.com/en-us/resources/templates/?WT.mc_id=learnARM-github-frbouche)
+- [GitHub - ARM Quickstarts](https://github.com/Azure/azure-quickstart-templates)
+- [Resources Explorer](https://resources.azure.com/?WT.mc_id=learnARM-github-frbouche)
+
 
 
 [<-- Episode/ Module 9](../ARM09/README.md) | [Episode/ Module 11 -->](../ARM11/README.md)
