@@ -1,4 +1,4 @@
-# ARM06 - Template output
+# 6 - Demystifying ARM Templates: Template Output
 
 In the Outputs section of your template, you can specify values that will be returned after a successful deployment.  You can use those outputs in your templates to return properties from the resources you are deploying. For example, it might be helpful to get the endpoints for a newly deployed storage account, or the public IP address or a newly deployed resource.
 

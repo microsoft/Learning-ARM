@@ -1,4 +1,4 @@
-# ARM01 - Introduction to ARM templates
+# 1 - Demystifying ARM Templates: Introduction to ARM Templates
 
 In this tutorial you will learn the what, the why about Azure Resource manager (ARM) template. Why why talk about declarative, idempotency.
 

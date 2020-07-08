@@ -1,4 +1,4 @@
-# ARM02 - Create first template
+# 2 - Demystifying ARM Templates: Create Your First Template
 
 Now it's time to code. This session introduces the ARM Tools extension for VS Code, shows you how to create your first template from a snippet, and how to deploy it.
 

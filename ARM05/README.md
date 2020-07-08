@@ -1,4 +1,4 @@
-# ARM05 - Variables
+# 5 - Demystifying ARM Templates: Variables
 
 Variables are very useful in all king of scenarios to simplify things. Azure Resource Manager (ARM) templates aren't an exception and the variable will offer great flexibility. In this chapter, we will explain how you can use variables inside your template to make them easier to read, or to use. 
 

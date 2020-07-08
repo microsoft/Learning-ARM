@@ -1,4 +1,4 @@
-# ARM04 - Template functions
+# 4 - Demystifying ARM Templates: Template Functions
 
 So now you are happy about all the things you learn in those first chapters. But their good chance is that if try to execute the PowerShell or Bash command on your side you will end up with: 
 
