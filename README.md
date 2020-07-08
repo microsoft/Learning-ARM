@@ -12,68 +12,68 @@ urlFragment: "update-this-to-unique-url-stub"
 
 In this repository you will find a series of tutorial paired with videos to guide you through learning the best practice about Azure Resource manager (ARM) template.
 
-Each video is featured in the same page as the content. The videos are part of Azure DevOps - DevOps Lab show.
+Each video is featured in the same page as the content. The videos are part of Azure DevOps - [DevOps Lab show](https://channel9.msdn.com/Shows/DevOps-Lab?WT.mc_id=learnARM-c9-fboucher).
 
 ## Tutorials
 
-### [ARM01 - Introduction to ARM templates](ARM01/README.md)
+### [1 - Introduction to ARM Templates](ARM01/README.md)
 
 In this tutorial you will learn the what, the why about Azure Resource manager (ARM) template. Why why talk about declarative, idempotency.
 
 
-### [ARM02 - Create first template](ARM02/README.md)
+### [2 - Create Your First Template](ARM02/README.md)
 
 Now it's time to code. This session will introduce Visual Studio Code tools, and show you how to create your first template from snippet, and how to deploy it.
 
 
-### [ARM03 - Parameters](ARM03/README.md)
+### [3 - Parameters](ARM03/README.md)
 
 This is where we will define our parameters. There is multiple type of parameters but before we go list them and see some scenarios, let's understand how parameters are defined.
 
 
-### [ARM04 - Template functions](ARM04/README.md)
+### [4 - Template Functions](ARM04/README.md)
 
 What are template functions, show common functions, add and use a template function.
 
 
-### [ARM05 - Variables](ARM05/README.md)
+### [5 - Variables](ARM05/README.md)
 
 Variables are very useful in all king of scenarios to simplify things. Azure Resource Manager (ARM) templates aren't an exception and the variable will offer great flexibility. In this chapter, we will explain how you can use variables inside your template to make them easier to read, or to use. 
 
 
-### [ARM06 - Template output](ARM06/README.md)
+### [6 - Template Output](ARM06/README.md)
 
 What are outputs and how are they used.
 
 
-### [ARM07 - Controlling deployment](ARM07/README.md)
+### [7 - Controlling Deployment](ARM07/README.md)
 
 Using dependencies to control resource deployment order.
 
 
-### [ARM08 - Nested and linked templates](ARM08/README.md)
+### [8 - Linked and Nested Templates](ARM08/README.md)
 
 How to modularize templates using nested and linked templates.
 
 
-### [ARM09 - Loops](ARM09/README.md)
+### [9 - Loops](ARM09/README.md)
 
 How to do loops and why would you do it.
 
 
-### [ARM10 - Getting an ARM template for Resource X](ARM10/README.md)
+### [10 - Getting an ARM Template for Resource X](ARM10/README.md)
 
 The ARM template are very powerful and useful, we can agree on that. However, something it could be hard to get started. In this tutorial you will learn tips and tricks to start from scratch with existing template or export the template from existing resources.
 
 
-### [ARM11 - Azure DevOps with ARM template](ARM11/README.md)
-
-Deploy an complete ARM template from Azure DevOps
-
-
-### [ARM12 - GitHub Actions with ARM template](ARM12/README.md)
+### [11 - GitHub Actions With ARM templates](ARM11/README.md)
 
 Deploy an complete ARM template using GitHub Actions
+
+
+### [12 - Azure DevOps With ARM Templates](ARM12/README.md)
+
+Deploy an complete ARM template from Azure DevOps
 
 
 

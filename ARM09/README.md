@@ -1,12 +1,9 @@
-# ARM09 - Finding template examples
+# 9 - Demystifying ARM Templates: Loops
 
-Using vs code snippets, quick start gallery, and exported templates.
+How to do loops and why would you do it.
 
 
-## References
 
-- https://github.com/Azure/azure-quickstart-templates
-- https://azure.microsoft.com/en-us/resources/templates/
 
 
 [<-- Episode/ Module 8](../ARM08/README.md) | [Episode/ Module 10 -->](../ARM10/README.md)
