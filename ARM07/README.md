@@ -109,7 +109,7 @@ Let's think about the storage used in the previous tutorial. By adding a propert
 
 ## Exercises
 
-Now let's practice the things we learn in all the chapters and improve our ARM template. You can continue where you left at the previous chapter (ARM03 -Parameter) or start fresh with the files contained in the folder [begin-with]([begin-with/azuredeploy.json)
+Now let's practice the things we learn in all the chapters and improve our ARM template. You can continue where you left at the previous chapter (ARM03 -Parameter) or start fresh with the files contained in the folder [begin-with](begin-with/azuredeploy.json)
 
 
 ### 🥖 Apply all the best practices 
