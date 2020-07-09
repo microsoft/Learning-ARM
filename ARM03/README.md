@@ -174,7 +174,7 @@ After confirming that your template and parameter file are valid, deploy it.
 
 ---
 
-To see if you have done successfully the exercises, compare your files with the once in the folder [end-with]([end-with/azuredeploy.json)
+To see if you have done successfully the exercises, compare your files with the once in the folder [end-results](end-results/azuredeploy.json)
 
 
 
