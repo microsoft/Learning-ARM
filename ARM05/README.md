@@ -94,7 +94,7 @@ The last step is to define a variable for SKU and Tier and assigned them a value
             }
         },
         "storageSKU": "[variables('storageInfo')[parameters('environment')].storageSKU]",
-        "StorageTier": "[variables('storageInfo')[parameters('environment')].storageTier]"
+        "storageTier": "[variables('storageInfo')[parameters('environment')].storageTier]"
     }
 ```
 
