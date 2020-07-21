@@ -3,8 +3,8 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "storageName": {
-           "type": "string",
-           "metadata": {
+            "type": "string",
+            "metadata": {
                 "description": "Name of your storage account. Text only no space."
             },
             "maxLength": 10
@@ -17,7 +17,7 @@
             ],
             "defaultValue": "DEV",
             "metadata": {
-            "description": "Define the type of environment and resource to deploy. "
+                "description": "Define the type of environment and resource to deploy. "
             }
         }
     },
@@ -37,8 +37,8 @@
             }
         },
         "storageSKU": "[variables('storageInfo')[parameters('environment')].storageSKU]",
-        "StorageTier": "[variables('storageInfo')[parameters('environment')].storageTier]",
-        "primeStorageName":"[variables('storageInfo')[parameters('environment')].name]"
+        "storageTier": "[variables('storageInfo')[parameters('environment')].storageTier]",
+        "primeStorageName": "[variables('storageInfo')[parameters('environment')].name]"
     },
     "resources": [
         {
@@ -51,9 +51,9 @@
             "location": "[resourceGroup().location]",
             "kind": "StorageV2",
             "sku": {
-               "name": "[variables('storageSKU')]",
-               "tier": "[variables('storageTier')]"
-             },
+                "name": "[variables('storageSKU')]",
+                "tier": "[variables('storageTier')]"
+            },
             "properties": {
                 "supportsHttpsTrafficOnly": true
             }

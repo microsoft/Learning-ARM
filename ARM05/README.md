@@ -94,7 +94,7 @@ The last step is to define a variable for SKU and Tier and assigned them a value
             }
         },
         "storageSKU": "[variables('storageInfo')[parameters('environment')].storageSKU]",
-        "StorageTier": "[variables('storageInfo')[parameters('environment')].storageTier]"
+        "storageTier": "[variables('storageInfo')[parameters('environment')].storageTier]"
     }
 ```
 
@@ -141,7 +141,7 @@ Here a few of the best practices that can be helpful when you work with variable
 
 ## Exercises
 
-Now let's practice the things we learn in all the chapters and improve our ARM template. You can continue where you left at the previous chapter (ARM03 -Parameter) or start fresh with the files contained in the folder [begin-with]([begin-with/azuredeploy.json)
+Now let's practice the things we learn in all the chapters and improve our ARM template. You can continue where you left at the previous chapter (ARM03 -Parameter) or start fresh with the files contained in the folder [begin-with](begin-with/azuredeploy.json)
 
 
 ### 🥖 Clean-up the ARM tempalte

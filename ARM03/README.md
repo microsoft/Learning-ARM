@@ -144,7 +144,7 @@ In this sample we would pass the secret **secretName** contained in the KeyVault
 
 ## Exercises
 
-Now let's practice the things we learn in the little chapter. You can continue where you left at the previous chapter (ARM02 - Create first template) or start fresh with the files contained in the folder [begin-with]([begin-with/azuredeploy.json)
+Now let's practice the things we learn in the little chapter. You can continue where you left at the previous chapter (ARM02 - Create first template) or start fresh with the files contained in the folder [begin-with](begin-with/azuredeploy.json)
 
 ### 🥖 Add the parameter storageSKU
 
@@ -174,7 +174,7 @@ After confirming that your template and parameter file are valid, deploy it.
 
 ---
 
-To see if you have done successfully the exercises, compare your files with the once in the folder [end-with]([end-with/azuredeploy.json)
+To see if you have done successfully the exercises, compare your files with the once in the folder [end-results](end-results/azuredeploy.json)
 
 
 

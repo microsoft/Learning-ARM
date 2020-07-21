@@ -6,7 +6,7 @@ In this tutorial we will introduce some key feature to keep your deployment in c
 
 ## Dependency
 
-Let's say we want to deploy a website, something simple. In Azure we will need two resources: an App Service and a Service plan. THe Service plan needs to be created before the App Service. We know Azure will paralyzed as much as possible during a deployment, to make sure the order is respected we need to use `dependsOn`. 
+Let's say we want to deploy a website, something simple. In Azure we will need two resources: an App Service and a Service plan. The Service plan needs to be created before the App Service. We know Azure will paralyzed as much as possible during a deployment, to make sure the order is respected we need to use `dependsOn`. 
 
 Let's start a new ARM template. If you are using Visual Studio Code with the extension it will only take you a few clicks to get started.
 
@@ -109,7 +109,7 @@ Let's think about the storage used in the previous tutorial. By adding a propert
 
 ## Exercises
 
-Now let's practice the things we learn in all the chapters and improve our ARM template. You can continue where you left at the previous chapter (ARM03 -Parameter) or start fresh with the files contained in the folder [begin-with]([begin-with/azuredeploy.json)
+Now let's practice the things we learn in all the chapters and improve our ARM template. You can continue where you left at the previous chapter (ARM03 -Parameter) or start fresh with the files contained in the folder [begin-with](begin-with/azuredeploy.json)
 
 
 ### 🥖 Apply all the best practices 
