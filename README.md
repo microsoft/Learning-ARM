@@ -4,7 +4,7 @@ languages:
 - arm, json, azcli
 products:
 - arm
-description: "A series of tutorial paired with videos to guide you through learning the best practice about Azure Resource manager (ARM) template."
+description: "A series of tutorial paired with videos to guide you through learning the best practice about Azure Resource Manager (ARM) template."
 urlFragment: "update-this-to-unique-url-stub"
 ---
 
@@ -18,7 +18,7 @@ Each video is featured in the same page as the content. The videos are part of A
 
 ### [1 - Introduction to ARM Templates](ARM01/README.md)
 
-In this tutorial you will learn the what, the why about Azure Resource manager (ARM) template. Why why talk about declarative, idempotency.
+In this tutorial you will learn the what, the why about Azure Resource Manager (ARM) template. Why why talk about declarative, idempotency.
 
 
 ### [2 - Create Your First Template](ARM02/README.md)
@@ -63,17 +63,17 @@ How to do loops and why would you do it.
 
 ### [10 - Getting an ARM Template for Resource X](ARM10/README.md)
 
-The ARM template are very powerful and useful, we can agree on that. However, something it could be hard to get started. In this tutorial you will learn tips and tricks to start from scratch with existing template or export the template from existing resources.
+The ARM template is very powerful and useful, we can agree on that. However, something it could be hard to get started. In this tutorial you will learn tips and tricks to start from scratch with existing template or export the template from existing resources.
 
 
 ### [11 - GitHub Actions With ARM templates](ARM11/README.md)
 
-Deploy an complete ARM template using GitHub Actions
+Deploy a complete ARM template using GitHub Actions
 
 
 ### [12 - Azure DevOps With ARM Templates](ARM12/README.md)
 
-Deploy an complete ARM template from Azure DevOps
+Deploy a complete ARM template from Azure DevOps
 
 
 

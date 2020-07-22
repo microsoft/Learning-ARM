@@ -93,7 +93,7 @@ You could when deploying the same solution to two different locations include th
 
 ## Exercises
 
-Now let's practice the things we learn in the little chapter. You can continue where you left at the previous chapter (ARM03 -Parameter) or start fresh with the files contained in the folder [begin-with]([begin-with/azuredeploy.json)
+Now let's practice the things we learn in the little chapter. You can continue where you left at the previous chapter (ARM03 -Parameter) or start fresh with the files contained in the folder [begin-with](begin-with/azuredeploy.json)
 
 
 ### 🥖 Make the suffix in lowercase
