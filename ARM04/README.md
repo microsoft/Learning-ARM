@@ -8,6 +8,17 @@ So now you are happy about all the things you learn in those first chapters. But
 
 The error message saying that this name is already taken because some names needed to be unique. In this chapter, you will learn how to fix this problem and so much more using the [ARM templates functions](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/template-functions?WT.mc_id=learnARM-github-frbouche).
 
+
+## Azure DevOps - DevOps Lab - Video
+
+[<img src="https://img.youtube.com/vi/n4WPf6F2oto/maxresdefault.jpg" width="50%">](https://youtu.be/n4WPf6F2oto)
+- [YouTube](https://youtu.be/n4WPf6F2oto)
+- [Channel9](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-4-Template-Functions?WT.mc_id=learnARM-c9-fboucher)
+
+
+---
+
+
 Meet the functions for ARM templates
 ------------------------------------
 
