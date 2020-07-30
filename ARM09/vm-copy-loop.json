@@ -1,0 +1,245 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "ProjectName": {
+            "type": "string",
+            "defaultValue": "FIM",
+            "minLength": 1,
+            "maxLength": 9,
+            "metadata": {
+                "description": "Name of the project. keep the name between 3 and 9 caracters"
+            }
+        },
+        "adminPassword": {
+            "type": "securestring",
+            "defaultValue": "P@ssw0rd1234",
+            "metadata": {
+                "description": "Sysadmin Password for OBS vms and Linux VM"
+            }
+        },
+        "VMCount": {
+            "type": "int",
+            "defaultvalue": 5,
+            "metadata": {
+                "description": "number of vm of each type"
+            }
+        }
+    },
+    "functions": [
+    ],
+    "variables": {
+        "VNet-Name": "[concat('vnet-',parameters('ProjectName'))]",
+        "location": "[resourceGroup().location]",
+        "internal_subnet_prefix": "10.0.1.0/24",
+        "windowsVMstorage": "[tolower(concat('win',parameters('ProjectName'),uniqueString(resourceGroup().id)))]"
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Network/networkSecurityGroups",
+            "apiVersion": "2019-11-01",
+            "name": "[concat('NSG-',parameters('ProjectName'))]",
+            "location": "[variables('location')]",
+            "properties": {
+                "securityRules": [
+                ]
+            }
+        },
+        {
+            "type": "Microsoft.Network/virtualNetworks",
+            "apiVersion": "2019-11-01",
+            "name": "[variables('VNet-Name')]",
+            "location": "[variables('location')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/networkSecurityGroups',concat('NSG-',parameters('ProjectName')))]"
+            ],
+            "tags": {
+                "displayName": "[variables('VNet-Name')]"
+            },
+            "properties": {
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "10.0.0.0/16"
+                    ]
+                },
+                "subnets": [
+                    {
+                        "name": "internal",
+                        "properties": {
+                            "addressPrefix": "[variables('internal_subnet_prefix')]",
+                            "serviceEndpoints": [
+                                {
+                                    "service": "Microsoft.Storage",
+                                    "locations": [
+                                        "[variables('location')]"
+                                    ]
+                                }
+                            ],
+                            "delegations": [
+                            ],
+                            "privateEndpointNetworkPolicies": "Enabled",
+                            "privateLinkServiceNetworkPolicies": "Enabled",
+                            "networkSecurityGroup": {
+                                "id": "[resourceId('Microsoft.Network/networkSecurityGroups',concat('NSG-',parameters('ProjectName')))]"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "[variables('windowsVMstorage')]",
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2019-06-01",
+            "tags": {
+                "displayName": "[variables('windowsVMstorage')]"
+            },
+            "location": "[variables('location')]",
+            "kind": "StorageV2",
+            "sku": {
+                "name": "Premium_LRS",
+                "tier": "Premium"
+            }
+        },
+        {
+            "type": "Microsoft.Network/networkInterfaces",
+            "name": "[concat('Win-NIC', copyIndex())]",
+            "apiVersion": "2019-12-01",
+            "location": "[variables('location')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks', variables('VNet-Name'))]"
+            ],
+            "copy": {
+                "name": "Niccopy",
+                "count": "[parameters('VMCount')]"
+            },
+            "properties": {
+                "ipConfigurations": [
+                    {
+                        "name": "ipconfig1",
+                        "properties": {
+                            "privateIPAllocationMethod": "Dynamic",
+                            "subnet": {
+                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets',variables('VNet-Name'),'internal')]"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "Microsoft.Network/networkInterfaces",
+            "name": "[concat('Linux-NIC', copyIndex())]",
+            "apiVersion": "2019-11-01",
+            "location": "[variables('location')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks', variables('VNet-Name'))]"
+            ],
+            "copy": {
+                "name": "LinuxNiccopy",
+                "count": "[parameters('VMCount')]"
+            },
+            "properties": {
+                "ipConfigurations": [
+                    {
+                        "name": "ipConfig1",
+                        "properties": {
+                            "privateIPAllocationMethod": "Dynamic",
+                            "subnet": {
+                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets',variables('VNet-Name'),'internal')]"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "Microsoft.Compute/virtualMachines",
+            "name": "[concat('Linux', copyIndex())]",
+            "apiVersion": "2019-07-01",
+            "location": "[variables('location')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/networkInterfaces', concat('Linux-NIC', copyIndex()))]"
+            ],
+            "copy": {
+                "name": "LinuXVMCopy",
+                "count": "[parameters('VMCount')]"
+            },
+            "properties": {
+                "hardwareProfile": {
+                    "vmSize": "Standard_D8s_v3"
+                },
+                "osProfile": {
+                    "computerName": "[concat('Linux', copyIndex())]",
+                    "adminUsername": "sysadmin",
+                    "adminPassword": "[parameters('adminPassword')]"
+                },
+                "storageProfile": {
+                    "imageReference": {
+                        "publisher": "Canonical",
+                        "offer": "UbuntuServer",
+                        "sku": "18.04-LTS",
+                        "version": "latest"
+                    },
+                    "osDisk": {
+                        "name": "[concat('LinuxOSDisk', copyIndex())]",
+                        "caching": "ReadWrite",
+                        "createOption": "FromImage"
+                    }
+                },
+                "networkProfile": {
+                    "networkInterfaces": [
+                        {
+                            "id": "[resourceId('Microsoft.Network/networkInterfaces',concat('Linux-NIC', copyIndex()))]"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Compute/virtualMachines",
+            "name": "[concat('Win', copyIndex())]",
+            "apiVersion": "2019-07-01",
+            "location": "[variables('location')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Storage/storageAccounts',variables('windowsVMstorage'))]"
+            ],
+            "copy": {
+                "name": "winservcopy",
+                "count": "[parameters('VMCount')]"
+            },
+            "properties": {
+                "hardwareProfile": {
+                    "vmSize": "Standard_D8s_v3"
+                },
+                "osProfile": {
+                    "computerName": "[concat('winserv', copyIndex())]",
+                    "adminUsername": "sysadmin ",
+                    "adminPassword": "[parameters('adminPassword')]"
+                },
+                "storageProfile": {
+                    "imageReference": {
+                        "publisher": "MicrosoftWindowsServer",
+                        "offer": "WindowsServer",
+                        "sku": "2019-Datacenter",
+                        "version": "latest"
+                    }
+                },
+                "networkProfile": {
+                    "networkInterfaces": [
+                        {
+                            "id": "[resourceId('Microsoft.Network/networkInterfaces', concat('Win-NIC', copyIndex()))]"
+                        }
+                    ]
+                },
+                "osDisk": {
+                    "name": "windowsVM1OSDisk",
+                    "caching": "ReadWrite",
+                    "createOption": "FromImage"
+                }
+            }
+        }
+    ],
+    "outputs": {
+    }
+}

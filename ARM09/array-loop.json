@@ -1,0 +1,44 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "storageAccountType": {
+            "type": "string",
+            "metadata": {
+                "description": "Type of storage account"
+            },
+            "defaultValue": "Standard_LRS"
+        },
+        "StorageAccountNames": {
+            "type": "array",
+            "defaultValue": [
+                "twt",
+                "contoso",
+                "fabrikam",
+                "coho"
+            ],
+            "metadata": {
+                "description": "Array of storage account names"
+            }
+        }
+    },
+    "variables": {
+    },
+    "resources": [
+        {
+            "name": "[toLower(concat(parameters('StorageAccountNames')[copyIndex()],uniqueString(resourceGroup().id)))]",
+            "copy": {
+                "name": "storagecopy",
+                "count": "[length(parameters('StorageAccountNames'))]"
+            },
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2015-06-15",
+            "location": "[resourceGroup().location]",
+            "properties": {
+                "accountType": "[parameters('storageAccountType')]"
+            }
+        }
+    ],
+    "outputs": {
+    }
+}
