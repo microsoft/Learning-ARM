@@ -2,6 +2,13 @@
 
 Variables are very useful in all king of scenarios to simplify things. Azure Resource Manager (ARM) templates aren't an exception and the variable will offer great flexibility. In this chapter, we will explain how you can use variables inside your template to make them easier to read, or to use. 
 
+## Azure DevOps - DevOps Lab - Video
+
+[<img src="https://img.youtube.com/vi/SvmdPNVcF_A/maxresdefault.jpg" width="50%">](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-5-Variables?WT.mc_id=learnARM-c9-fboucher)
+- [YouTube](https://youtu.be/SvmdPNVcF_A)
+- [Channel9](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-5-Variables?WT.mc_id=learnARM-c9-fboucher)
+
+
 How to define Variables in am ARM template
 ------------------------------------------
 

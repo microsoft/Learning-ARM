@@ -27,9 +27,9 @@ there are certain elements that make up the outputs section.
 - **Value**: (Optional) Template language expression that is evaluated and returned as output value.
 - **Copy**: (Optional) the Copy is used to return more than one value for an output.
 
-For more information, and for the full documentation on outputs you can refer to [Output iteration in Azure Resource Manager templates](https://docs.microsoft.com/azure/azure-resource-manager/templates/copy-outputs).
+For more information, and for the full documentation on outputs you can refer to [Output iteration in Azure Resource Manager templates](https://docs.microsoft.com/azure/azure-resource-manager/templates/copy-outputs?WT.mc_id=learnARM-github-fboucher).
 
-And for a complete set of examples of outputs, refer to the [Outputs in Azure Resource Manager template](https://docs.microsoft.com/azure/azure-resource-manager/templates/template-outputs) document.
+And for a complete set of examples of outputs, refer to the [Outputs in Azure Resource Manager template](https://docs.microsoft.com/azure/azure-resource-manager/templates/template-outputs?WT.mc_id=learnARM-github-fboucher) document.
 
 
 [<-- Episode/ Module 5](../ARM05/README.md) | [Episode/ Module 7 -->](../ARM07/README.md)
