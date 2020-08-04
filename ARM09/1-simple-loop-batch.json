@@ -1,0 +1,40 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "storageAccountName": {
+            "type": "string",
+            "defaultValue": "devopslab"
+        },
+        "storageAccountType": {
+            "type": "string",
+            "defaultValue": "Standard_LRS"
+        },
+        "StorageAccountCount": {
+            "type": "int",
+            "defaultValue": 6
+        }
+    },
+    "variables": {
+        "storageApiVersion": "2015-06-15"
+    },
+    "resources": [
+        {
+            "name": "[toLower(concat(parameters('storageAccountName'),copyIndex(),uniqueString(resourceGroup().id)))]",
+            "copy": {
+                "name": "storagecopy",
+                "count": "[parameters('StorageAccountCount')]",
+                "mode": "serial",
+                "batchSize": 2
+            },
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "[variables('storageApiVersion')]",
+            "location": "[resourceGroup().location]",
+            "properties": {
+                "accountType": "[parameters('storageAccountType')]"
+            }
+        }
+    ],
+    "outputs": {
+    }
+}
