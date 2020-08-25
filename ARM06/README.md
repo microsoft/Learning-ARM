@@ -1,8 +1,16 @@
 # 6 - Demystifying ARM Templates: Template Output
 
+
+## Azure DevOps - DevOps Lab - Video
+
+[<img src="https://img.youtube.com/vi/T-GnsabXcGY/maxresdefault.jpg" width="50%">](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-6-Template-Output?WT.mc_id=learnARM-c9-fboucher)
+- [YouTube](https://youtu.be/T-GnsabXcGY)
+- [Channel9](hhttps://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-6-Template-Output?WT.mc_id=learnARM-c9-fboucher)
+
+
 In the Outputs section of your template, you can specify values that will be returned after a successful deployment.  You can use those outputs in your templates to return properties from the resources you are deploying. For example, it might be helpful to get the endpoints for a newly deployed storage account, or the public IP address or a newly deployed resource.
 
-the Output section uses the reference function to get the runtime state of the resources. To get the runtime state of a resource, you pass in the name or ID of a resource.
+The Output section uses the reference function to get the runtime state of the resources. To get the runtime state of a resource, you pass in the name or ID of a resource.
 
 there are certain elements that make up the outputs section.
 

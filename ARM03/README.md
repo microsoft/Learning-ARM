@@ -92,7 +92,7 @@ That's a valid command and it will works. However it's not very convenient and p
 
 ## Create a Parameter file.
 
-A parameter files is just yet another JSON file. SO you can easily create that in any text editor. However, there is a few really nice feature in the VS Code Extension: [Azure Resource Manager (ARM) Tools](https://marketplace.visualstudio.com/items?WT.mc_id=learningarm-github-frbouche&itemName=msazurermtools.azurerm-vscode-tools) that will make you save a lot of time.
+A parameter files is just yet another JSON file. SO you can easily create that in any text editor. However, there is a few really nice feature in the VS Code Extension: [Azure Resource Manager (ARM) Tools](https://marketplace.visualstudio.com/items?WT.mc_id=learnARM-github-frbouche&itemName=msazurermtools.azurerm-vscode-tools) that will make you save a lot of time.
 
 To create a new parameter file simply right-click anywhere in your ARM template, to make the contextual menu to popup. Select **Select/Create Parameter File...**, then **New** and Finally **All parameters**.
 
