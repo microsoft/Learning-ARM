@@ -3,9 +3,9 @@
 
 ## Azure DevOps - DevOps Lab - Video
 
-[<img src="https://img.youtube.com/vi/T-GnsabXcGY/maxresdefault.jpg" width="50%">](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-6-Template-Output?WT.mc_id=learnARM-c9-fboucher)
+[<img src="https://img.youtube.com/vi/T-GnsabXcGY/maxresdefault.jpg" width="50%">](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-6-Template-Output?WT.mc_id=learnARM-c9-frbouche)
 - [YouTube](https://youtu.be/T-GnsabXcGY)
-- [Channel9](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-6-Template-Output?WT.mc_id=learnARM-c9-fboucher)
+- [Channel9](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-6-Template-Output?WT.mc_id=learnARM-c9-frbouche)
 
 
 In the Outputs section of your template, you can specify values that will be returned after a successful deployment.  You can use those outputs in your templates to return properties from the resources you are deploying. For example, it might be helpful to get the endpoints for a newly deployed storage account, or the public IP address or a newly deployed resource.
@@ -35,9 +35,9 @@ there are certain elements that make up the outputs section.
 - **Value**: (Optional) Template language expression that is evaluated and returned as output value.
 - **Copy**: (Optional) the Copy is used to return more than one value for an output.
 
-For more information, and for the full documentation on outputs you can refer to [Output iteration in Azure Resource Manager templates](https://docs.microsoft.com/azure/azure-resource-manager/templates/copy-outputs?WT.mc_id=learnARM-github-fboucher).
+For more information, and for the full documentation on outputs you can refer to [Output iteration in Azure Resource Manager templates](https://docs.microsoft.com/azure/azure-resource-manager/templates/copy-outputs?WT.mc_id=learnARM-github-frbouche).
 
-And for a complete set of examples of outputs, refer to the [Outputs in Azure Resource Manager template](https://docs.microsoft.com/azure/azure-resource-manager/templates/template-outputs?WT.mc_id=learnARM-github-fboucher) document.
+And for a complete set of examples of outputs, refer to the [Outputs in Azure Resource Manager template](https://docs.microsoft.com/azure/azure-resource-manager/templates/template-outputs?WT.mc_id=learnARM-github-frbouche) document.
 
 
 [<-- Episode/ Module 5](../ARM05/README.md) | [Episode/ Module 7 -->](../ARM07/README.md)

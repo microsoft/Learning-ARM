@@ -7,9 +7,9 @@ In this tutorial we will introduce some key feature to keep your deployment in c
 
 ## Azure DevOps - DevOps Lab - Video
 
-[<img src="https://img.youtube.com/vi/Bl_gcsdnAH4/maxresdefault.jpg" width="50%">](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-7-Controlling-Deployment?WT.mc_id=learnARM-c9-fboucher)
+[<img src="https://img.youtube.com/vi/Bl_gcsdnAH4/maxresdefault.jpg" width="50%">](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-7-Controlling-Deployment?WT.mc_id=learnARM-c9-frbouche)
 - [YouTube](https://youtu.be/Bl_gcsdnAH4)
-- [Channel9](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-7-Controlling-Deployment?WT.mc_id=learnARM-c9-fboucher)
+- [Channel9](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-7-Controlling-Deployment?WT.mc_id=learnARM-c9-frbouche)
 
 
 

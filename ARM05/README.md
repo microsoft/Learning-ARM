@@ -4,9 +4,9 @@ Variables are very useful in all king of scenarios to simplify things. Azure Res
 
 ## Azure DevOps - DevOps Lab - Video
 
-[<img src="https://img.youtube.com/vi/SvmdPNVcF_A/maxresdefault.jpg" width="50%">](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-5-Variables?WT.mc_id=learnARM-c9-fboucher)
+[<img src="https://img.youtube.com/vi/SvmdPNVcF_A/maxresdefault.jpg" width="50%">](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-5-Variables?WT.mc_id=learnARM-c9-frbouche)
 - [YouTube](https://youtu.be/SvmdPNVcF_A)
-- [Channel9](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-5-Variables?WT.mc_id=learnARM-c9-fboucher)
+- [Channel9](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-5-Variables?WT.mc_id=learnARM-c9-frbouche)
 
 
 How to define Variables in am ARM template

@@ -13,7 +13,7 @@ The error message saying that this name is already taken because some names need
 
 [<img src="https://img.youtube.com/vi/n4WPf6F2oto/maxresdefault.jpg" width="50%">](https://youtu.be/n4WPf6F2oto)
 - [YouTube](https://youtu.be/n4WPf6F2oto)
-- [Channel9](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-4-Template-Functions?WT.mc_id=learnARM-c9-fboucher)
+- [Channel9](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-4-Template-Functions?WT.mc_id=learnARM-c9-frbouche)
 
 
 ---

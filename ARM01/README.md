@@ -41,7 +41,7 @@ Here are some advantages to use ARM template :
 
 ## References
 
-- https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview
+- [What is Azure Resource Manager](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview?WT.mc_id=learnARM-github-frbouche)
 
 
 [Episode/ Module 2 -->](../ARM02/README.md)
