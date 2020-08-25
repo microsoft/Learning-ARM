@@ -4,6 +4,16 @@ In the previous tutorial we were deploying only one resource. In most cases you 
 
 In this tutorial we will introduce some key feature to keep your deployment in control.
 
+
+## Azure DevOps - DevOps Lab - Video
+
+[<img src="https://img.youtube.com/vi/Bl_gcsdnAH4/maxresdefault.jpg" width="50%">](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-7-Controlling-Deployment?WT.mc_id=learnARM-c9-fboucher)
+- [YouTube](https://youtu.be/Bl_gcsdnAH4)
+- [Channel9](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-7-Controlling-Deployment?WT.mc_id=learnARM-c9-fboucher)
+
+
+
+
 ## Dependency
 
 Let's say we want to deploy a website, something simple. In Azure we will need two resources: an App Service and a Service plan. The Service plan needs to be created before the App Service. We know Azure will paralyzed as much as possible during a deployment, to make sure the order is respected we need to use `dependsOn`. 
