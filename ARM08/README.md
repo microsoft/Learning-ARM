@@ -7,6 +7,14 @@ As ARM deployments become more complex, using linked and nested templates allow 
 
 See the following for [documentation on both linked and nested templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/linked-templates?WT.mc_id=learnARM-github-frbouche).
 
+
+## Azure DevOps - DevOps Lab - Video
+
+[<img src="https://img.youtube.com/vi/rUY7wmz0W10/maxresdefault.jpg" width="50%">](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-8-Linked-and-Nested-Templates?WT.mc_id=learnARM-github-frbouche)
+- [YouTube](https://youtu.be/rUY7wmz0W10)
+- [Channel9](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-8-Linked-and-Nested-Templates?WT.mc_id=learnARM-github-frbouche)
+
+
 ## Linked template example
 
 To use linked templates, the templates must first be staged on a publically accessible endpoint such as GitHub or an Azure Storage Blob. Consider using an Azure Storage account secured by a SAS token to keep your templates secure from public access. See [this document](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/linked-templates?WT.mc_id=learnARM-github-frbouche) for more details.
