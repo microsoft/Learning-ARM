@@ -19,6 +19,14 @@ The copy element has the following general format:
 1. The **count** property specifies the number of iterations you want for the resource type.
 1. The **mode** and **batchSize** properties to specify if the resources are deployed in parallel or in sequence.
 
+
+## Azure DevOps - DevOps Lab - Video
+
+[<img src="https://img.youtube.com/vi/hEcFfXJNgeE/maxresdefault.jpg" width="50%">](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-9-Loops?WT.mc_id=learnARM-github-frbouche)
+- [YouTube](https://youtu.be/hEcFfXJNgeE)
+- [Channel9](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-9-Loops?WT.mc_id=learnARM-github-frbouche)
+
+
 ## Simple loop
 
 The simplest copy as shown in the example below, iterates through the number specified in the `StorageAccountCount` parameter.  It is very important that you pay attention to the name you give your resources.  The name of each resource will need to includes the `copyIndex()` function, which returns the current iteration in the loop. copyIndex() is zero-based. So, the following example:
@@ -242,5 +250,13 @@ In our example We are using `"name": "[toLower(concat(parameters('StorageAccount
 so the names of the resources will have the names in the array wih a unique identifier as a suffix.
 
 ![Array loop results](./media/array.png)
+
+
+---
+
+#### Reference: 
+
+- [Resource iteration in ARM templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/copy-resources?WT.mc_id=learnARM-github-frbouche)
+
 
 [<-- Episode/ Module 8](../ARM08/README.md) | [Episode/ Module 10 -->](../ARM10/README.md)
