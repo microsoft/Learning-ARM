@@ -1,0 +1,104 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "webAppName": {
+            "type": "string",
+            "defaultValue": "[concat('webApp-', uniqueString(resourceGroup().id))]",
+            "metadata": {
+                "description": "Web app name."
+            },
+            "minLength": 2
+        },
+        "location": {
+            "type": "string",
+            "defaultValue": "West US",
+            "metadata": {
+                "description": "Location for all resources."
+            }
+        },
+        "sku": {
+            "type": "string",
+            "defaultValue": "F1",
+            "metadata": {
+                "description": "The SKU of App Service Plan."
+            }
+        },
+        "language": {
+            "type": "string",
+            "defaultValue": ".net",
+            "allowedValues": [
+                ".net",
+                "php",
+                "node",
+                "html"
+            ],
+            "metadata": {
+                "description": "The language stack of the app."
+            }
+        }
+    },
+    "variables": {
+        "appServicePlanPortalName": "[concat('AppServicePlan-', parameters('webAppName'))]",
+        "configReference": {
+            ".net": {
+                "comments": ".Net app. No additional configuration needed."
+            },
+            "html": {
+                "comments": "HTML app. No additional configuration needed."
+            },
+            "php": {
+                "phpVersion": "7.4"
+            },
+            "node": {
+                "appSettings": [
+                    {
+                        "name": "WEBSITE_NODE_DEFAULT_VERSION",
+                        "value": "12.15.0"
+                    }
+                ]
+            }
+        }
+    },
+    "resources": [
+        {
+            "apiVersion": "2019-08-01",
+            "type": "Microsoft.Web/serverfarms",
+            "name": "[variables('appServicePlanPortalName')]",
+            "location": "[parameters('location')]",
+            "sku": {
+                "name": "[parameters('sku')]"
+            }
+        },
+        {
+            "apiVersion": "2019-08-01",
+            "type": "Microsoft.Web/sites",
+            "name": "[parameters('webAppName')]",
+            "location": "[parameters('location')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanPortalName'))]"
+            ],
+            "properties": {
+                "siteConfig": "[variables('configReference')[parameters('language')]]",
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanPortalName'))]"
+            },
+            "resources": [
+                {
+                    "name": "appsettings",
+                    "type": "config",
+                    "apiVersion": "2015-08-01",
+                    "dependsOn": [
+                        "[concat('Microsoft.Web/sites/', parameters('webAppName'))]"
+                    ],
+                    "tags": {
+                        "displayName": "WebAppSettings"
+                    },
+                    "properties": {
+                        "ApiUrl": "https://backend.tailwindtraders.com/webbff/v1",
+                        "ApiUrlShoppingCart": "https://backend.tailwindtraders.com/cart-api"
+                    }
+                }
+            ]
+        }
+    ]
+}
