@@ -1,0 +1,107 @@
+name: DevOps Lab ARM Demo - CICD
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    
+    # checkout code from repo
+    - name: Checkout code
+      uses: actions/checkout@v1
+      
+    # setup .net core   
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 2.1.x
+   
+    # setup nodejs
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10.x
+   
+    # install all dependencies
+    - name: Install dependencies
+      run: dotnet restore ./Source/*.sln
+    
+    # build app
+    - name: Build
+      run: dotnet build ./Source/*.sln --configuration Release --no-restore
+   
+    # run unit tests
+    - name: Test
+      run: dotnet test ./Source/*.sln --no-restore --verbosity normal
+    
+    # bundle up app and copy it to the ./staging directory
+    - name: Publish
+      run: dotnet publish ./Source/Tailwind.Traders.Web/Tailwind.Traders.Web.csproj -c Release -o './staging'
+   
+    # upload build artifact
+    - name: Publish build artifacts back to GitHub
+      uses: actions/upload-artifact@master
+      with:
+        name: webapp
+        path: staging
+
+  provisionAndConfigure:
+      runs-on: ubuntu-latest
+      steps:
+        # checkout code from repo
+        - name: Checkout code
+          uses: actions/checkout@v1
+
+        # provision and configure infrastructure using azure cli deploying arm template
+        - name: Deploy ARM template
+          env:
+            SERVICE_PRINCIPAL: http://AbelDemoSubscriptionSP
+            SERVICE_PRINCIPAL_TENANT: 72f988bf-86f1-41af-91ab-2d7cd011db47
+            RESOURCE_GROUP: DevOpsLabARMDemoRG
+            WEB_APP_NAME: devopslabtt
+            LOCATION: "westus"
+            ARM_FILE: ./Deploy/ARM/tt-iac.json
+          run: |
+            az login \
+                --service-principal \
+                --username ${SERVICE_PRINCIPAL} \
+                --password ${{ secrets.SERVICE_PRINCIPAL_SECRET }} \
+                --tenant ${SERVICE_PRINCIPAL_TENANT}
+            az deployment sub create \
+                --location ${LOCATION} \
+                --template-file ${ARM_FILE} \
+                --parameters webAppName=${WEB_APP_NAME} name=${RESOURCE_GROUP}
+ 
+  deploy:
+    needs: [build, provisionAndConfigure] 
+    runs-on: windows-latest
+    steps:
+      
+      # download build artifacts
+      - name: Download build artifacts
+        uses: actions/download-artifact@master
+        with:
+          name: webapp
+
+      - name: show webapp directory
+        run: |
+          echo ls
+          ls
+          
+      # deploy web app
+      - name: Deploy web app
+        env:
+          SERVICE_PRINCIPAL: http://AbelDemoSubscriptionSP
+          SERVICE_PRINCIPAL_TENANT: 72f988bf-86f1-41af-91ab-2d7cd011db47
+          RESOURCE_GROUP: DevOpsLabARMDemoRG
+          WEB_APP_NAME: devopslabtt
+          PATH_TO_WEBSITE_ZIP: .\Tailwind.Traders.web.zip
+        run: >
+          powershell -command "& ./deployWebApp.ps1 "
+          -servicePrincipal %SERVICE_PRINCIPAL% 
+          -servicePrincipalSecret ${{ secrets.SERVICE_PRINCIPAL_SECRET }} 
+          -servicePrincipalTenantId %SERVICE_PRINCIPAL_TENANT% 
+          -resourceGroupName %RESOURCE_GROUP% 
+          -webAppName %WEB_APP_NAME% 
+          -pathToWebsiteZip %PATH_TO_WEBSITE_ZIP% 
