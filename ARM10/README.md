@@ -2,6 +2,13 @@
 
 The ARM template are very powerful and useful, we can agree on that. However, something it could be hard to get started. In this tutorial you will learn tips and tricks to start from scratch with existing template or export the template from existing resources. 
 
+## Azure DevOps - DevOps Lab - Video
+
+[<img src="https://img.youtube.com/vi/YrEAy7oLVew/maxresdefault.jpg" width="50%">](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-10-Template-for-Resource-X?WT.mc_id=learnARM-github-frbouche)
+- [YouTube](https://youtu.be/YrEAy7oLVew)
+- [Channel9](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-10-Template-for-Resource-X?WT.mc_id=learnARM-github-frbouche)
+
+
 Azure Quickstart Templates
 --------------------------
 
