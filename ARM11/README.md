@@ -7,6 +7,13 @@ Some key benefits
 - being able to go from nothing in Azure, to a fully provisioned and configured environment in Azure, and then deploying your App into that environment is priceless
 - protection from configuration drift in subsdquent releases is awesome
 
+## Azure DevOps - DevOps Lab - Video
+
+[<img src="https://img.youtube.com/vi/DHFjc3UWvx4/maxresdefault.jpg" width="50%">](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-11-GitHub-Actions?WT.mc_id=learnARM-github-abewan)
+- [YouTube](https://youtu.be/DHFjc3UWvx4)
+- [Channel9](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-11-GitHub-Actions?WT.mc_id=learnARM-github-abewan)
+
+
 ## Deploy a complete ARM template using GitHub Actions
 GitHub Actions is GitHub's workflow engine where you can automate all sorts of things including CI/CD. A very basic explanation of actions is it's a task engine that does one task after another after another. Tasks in GitHub Actions are called actions. 
 
@@ -52,7 +59,7 @@ All that said, to use the Azure CLI to deploy an arm template, I needed 2 things
 
 The demo environment consists of an app service plan and an app service in Azure. [Here](./tt-iac.json) is the ARM template which describes this environment. For the demo, this arm template sat at ~/Deploy/ARM/tt-iac.json.
 
-I [created a service principal](https://docs.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest&WT.mc_id=devops-0000-abewan) using the Azure CLI. This returned me:
+I [created a service principal](https://docs.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest&WT.mc_id=learnARM-github-abewan) using the Azure CLI. This returned me:
 
 - Service principal name - http://AbelDemoSubscriptionSP
 - Service principal tenant - 72f988bf-86f1-41af-91ab-2d7cd011db47
@@ -115,13 +122,13 @@ _Note: Again, with the newly published ARM Template Deploy Actions from Microsof
 
 
 ## References
-- [Azure CLI](https://docs.microsoft.com/cli/azure/what-is-azure-cli?view=azure-cli-latest&WT.mc_id=devops-0000-abewan)
-- [Install the Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest&WT.mc_id=devops-0000-abewan)
-- [Service Principal](https://docs.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals?WT.mc_id=devops-0000-abewan)
-- [Creating service principal](https://docs.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest&WT.mc_id=devops-0000-abewan)
-- [logging into azure cli with service principal](https://docs.microsoft.com/cli/azure/authenticate-azure-cli?view=azure-cli-latest&WT.mc_id=devops-0000-abewan)
-- [Deploying ARM template using Azure CLI](https://docs.microsoft.com/azure/azure-resource-manager/templates/deploy-cli?WT.mc_id=devops-0000-abewan)
-- [Microsoft's Deploy ARM Templates GitHub Actions](https://docs.microsoft.com/azure/azure-resource-manager/templates/deploy-github-actions?WT.mc_id=devops-0000-abewan)
+- [Azure CLI](https://docs.microsoft.com/cli/azure/what-is-azure-cli?view=azure-cli-latest&WT.mc_id=learnARM-github-abewan)
+- [Install the Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest&WT.mc_id=learnARM-github-abewan)
+- [Service Principal](https://docs.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals?WT.mc_id=learnARM-github-abewan)
+- [Creating service principal](https://docs.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest&WT.mc_id=learnARM-github-abewan)
+- [logging into azure cli with service principal](https://docs.microsoft.com/cli/azure/authenticate-azure-cli?view=azure-cli-latest&WT.mc_id=learnARM-github-abewan)
+- [Deploying ARM template using Azure CLI](https://docs.microsoft.com/azure/azure-resource-manager/templates/deploy-cli?WT.mc_id=learnARM-github-abewan)
+- [Microsoft's Deploy ARM Templates GitHub Actions](https://docs.microsoft.com/azure/azure-resource-manager/templates/deploy-github-actions?WT.mc_id=learnARM-github-abewan)
 
 
 
