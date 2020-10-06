@@ -7,6 +7,13 @@ Some key benefits
 - being able to go from nothing in Azure, to a fully provisioned and configured environment in Azure, and then deploying your App into that environment is priceless
 - protection from configuration drift in subsdquent releases is awesome
 
+## Azure DevOps - DevOps Lab - Video
+
+[<img src="https://img.youtube.com/vi/j4I3C6U8K4c/maxresdefault.jpg" width="50%">](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-12-Azure-DevOps-With-ARM-Templates?WT.mc_id=learnARM-github-abewan)
+- [YouTube](https://youtu.be/j4I3C6U8K4c)
+- [Channel9](https://channel9.msdn.com/Shows/DevOps-Lab/ARM-Series-12-Azure-DevOps-With-ARM-Templates?WT.mc_id=learnARM-github-abewan)
+
+
 ## Deploy a complete ARM template using Azure DevOps
 Azure DevOps Services is a super powerful set of DevOps tooling built directly in Azure. Included in Azure DevOps Services is Azure Pipelines. Azure Pipelines is the CI/CD system.
 
