@@ -46,10 +46,10 @@ Also, noticed I picked Incremental as my Deployment Mode. For this demo, I didn'
 Deploying ARM templates inside of Azure DevOps is super easy. Pre-built, out of the box tasks make deploying arm templates as easy as dragging, dropping and then filling out some properties.
 
 ## References
-- [Azure DevOps for build and release](https://docs.microsoft.com/azure/devops/pipelines/get-started/?view=azure-devops&WT.mc_id=devops-0000-abewan)
-- [ARM template deployment modes](https://docs.microsoft.com/azure/azure-resource-manager/templates/deployment-modes?WT.mc_id=devops-0000-abewan)
-- [Deploy to Azure App Service task](https://docs.microsoft.com/azure/devops/pipelines/tasks/deploy/azure-resource-group-deployment?view=azure-devops&WT.mc_id=devops-0000-abewan)
-- [CI/CD with Azure Pipelines and ARM Templates](https://docs.microsoft.com/azure/azure-resource-manager/templates/add-template-to-azure-pipelines?WT.mc_id=devops-0000-abewan)
+- [Azure DevOps for build and release](https://docs.microsoft.com/azure/devops/pipelines/get-started/?view=azure-devops&WT.mc_id=learnARM-github-abewan)
+- [ARM template deployment modes](https://docs.microsoft.com/azure/azure-resource-manager/templates/deployment-modes?WT.mc_id=learnARM-github-abewan)
+- [Deploy to Azure App Service task](https://docs.microsoft.com/azure/devops/pipelines/tasks/deploy/azure-resource-group-deployment?view=azure-devops&WT.mc_id=learnARM-github-abewan)
+- [CI/CD with Azure Pipelines and ARM Templates](https://docs.microsoft.com/azure/azure-resource-manager/templates/add-template-to-azure-pipelines?WT.mc_id=learnARM-github-abewan)
 
 
 [<-- Episode/ Module 11](../ARM11/README.md)
