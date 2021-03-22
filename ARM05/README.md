@@ -32,8 +32,8 @@ And now to use those variables I will use the very handy function `variables()` 
         }
 ```
 
-Make our ARM template it easy to use
--------------------------------------
+Make our ARM template easy to use
+---------------------------------
 
 Sometimes, the person who needs to deploy our ARm template doesn't know all the details about the resources. When deploying a Virtual machine by example what the difference between the SKU: D2V2, F16sv2, or NV24?! What the user knows is that he/she needs a VM for X scenario. We can use variables to make those choices easier and make our template easier to use with the T-Shirt size pattern.
 
